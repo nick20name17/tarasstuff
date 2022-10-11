@@ -1,0 +1,63 @@
+@charset "UTF-8";
+@import url(/reset.css);
+.travel {
+  margin-top: 50px;
+}
+.travel__block {
+  width: 425px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.495);
+}
+.travel__block-wrapper {
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.travel__img {
+  border-radius: 7px 7px 0 0;
+}
+.travel__text {
+  font-family: sans-serif;
+  padding: 20px;
+}
+.travel__text_type {
+  display: block;
+  font-family: sans-serif;
+  color: gray !important;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+.travel__text_header {
+  display: block;
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.travel__date {
+  padding-top: 20px;
+  color: rgb(177, 177, 177) !important;
+}
+.travel__paragraph {
+  padding-top: 20px;
+  color: gray;
+}
+.travel__button {
+  display: block;
+  color: rgb(21, 0, 255) !important;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 3px;
+  padding-top: 20px;
+}
+
+.travel__date::before {
+  content: "🕜";
+  opacity: 40%;
+  font-size: 12px;
+  padding-right: 10px;
+}
+
+.travel__button::after {
+  content: "🠖";
+  padding-left: 10px;
+}/*# sourceMappingURL=style.css.map */
