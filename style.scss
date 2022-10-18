@@ -1,4 +1,174 @@
-@import url(/reset.css);
+@import url(./reset.css);
+
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1320px;
+}
+.header__container {
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #fff;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.227);
+
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  &__container {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+}
+.navbar-expand-lg {
+  justify-content: space-between !important;
+}
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+}
+.bg-light {
+  background-color: rgba(248, 249, 250, 0) !important;
+}
+.form-control {
+  margin-right: 2vw;
+  width: 40vw;
+}
+.form-control:focus {
+  color: #4e66f8;
+  background-color: #fff;
+  border-color: #4e66f8;
+  outline: 0;
+  box-shadow: 0 0 5px 0.05rem #24294d79;
+}
+.btn-outline-success {
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+  background-color: #4e66f8;
+  background-image: none;
+}
+.btn-outline-success:hover {
+  color: #fff;
+  background-color: #3e4fbf;
+}
+.btn-outline-success:active,
+.btn-outline-success:focus {
+  color: #fff;
+  background-color: #4e66f8 !important;
+  border-color: #4e66f8 !important;
+  box-shadow: 0 0 5px 0.05rem #4e66f8 !important;
+}
+
+.hero {
+  background: url(/img/photo-1501621965065-c6e1cf6b53e2.jpg) 0 -330px/100% no-repeat;
+  display: flex;
+  animation: slider 30s infinite;
+  align-items: center;
+  height: 600px;
+  &__header {
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: rgb(255, 12, 154);
+    &_small {
+      font-size: 80px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      margin-bottom: 50px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 3px 5px 3px 40px;
+    border-radius: 50px;
+    background-color: #fff;
+  }
+
+  &__search {
+    height: 25px;
+    width: 265px;
+    margin-right: 25px;
+    font-size: 18px;
+    outline: none;
+  }
+
+  &__location {
+    border-left: rgb(210, 210, 210) solid 1px;
+    height: 25px;
+    font-size: 18px;
+    outline: none;
+    margin-right: 10px;
+    padding-left: 20px;
+  }
+  &__img_loc {
+    margin-right: 10px;
+    height: 25px;
+    padding-right: 10px;
+    border-right: rgb(210, 210, 210) solid 1px;
+  }
+  &__aim {
+    fill: rgb(57, 57, 57);
+    width: 16px;
+    height: 16px;
+  }
+
+  &__selector {
+    padding-left: 10px;
+    padding-right: 80px;
+    height: 45px;
+    font-size: 18px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-right: 100px;
+  }
+  &__selector:hover {
+    background-color: rgb(211, 214, 224);
+    transition: 0.3s;
+  }
+  &__selector:focus {
+    box-shadow: 0px 0px 0px 3px rgb(234, 236, 243);
+    transition: 0.3s;
+  }
+  &__button {
+    background-color: #4e66f8 !important;
+    padding: 10px 40px;
+    color: white !important;
+    border-radius: 45px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    font-weight: bold;
+    &:hover {
+      background-color: #4f5fc9 !important;
+      transition: 0.3s;
+    }
+  }
+
+  @keyframes slider {
+    0% {
+      background: url(/img/photo-1490578474895-699cd4e2cf59.jpg) 0 -330px/100%
+        no-repeat;
+    }
+    50% {
+      background: url(/img/photo-1501621965065-c6e1cf6b53e2.jpg) 0 -330px/100%
+        no-repeat;
+    }
+    100% {
+      background: url(/img/photo-1519974719765-e6559eac2575.jpg) 0 -330px/100%
+        no-repeat;
+    }
+  }
+}
 
 .travel {
   margin-top: 50px;
@@ -7,7 +177,13 @@
   &__block {
     width: 425px;
     border-radius: 7px;
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.495);
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.227);
+    transition: all 0.2s ease-in;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-5px);
+      transition: all 0.2s ease-in;
+    }
   }
   &__block-wrapper {
     display: flex;
@@ -45,7 +221,6 @@
 
   &__paragraph {
     padding-top: 20px;
-
     color: gray;
   }
 
@@ -57,6 +232,7 @@
     font-size: 14px;
     letter-spacing: 3px;
     padding-top: 20px;
+    padding-bottom: 40px;
   }
 }
 .travel__date::before {
@@ -68,4 +244,119 @@
 .travel__button::after {
   content: '\1F816';
   padding-left: 10px;
+}
+
+.line {
+  margin-top: 100px;
+  &__img {
+    width: 120px;
+  }
+  &__wrapper {
+    width: 120%;
+    display: flex;
+  }
+}
+.img {
+  &__wrapper {
+  }
+}
+
+.footer {
+  background-color: #e9ecef;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+  &__header {
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  &__paragraph {
+    font-family: sans-serif;
+    max-width: 300px;
+    margin-top: 20px;
+    color: gray;
+  }
+  .long {
+    max-width: 400px;
+  }
+  &__list {
+    margin-top: 20px;
+  }
+  &__item {
+    font-family: sans-serif;
+    padding: 4px 0;
+    font-size: 16px;
+    color: gray;
+  }
+  &__link {
+    padding: 0;
+    margin: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .copyrght__wrapper {
+    background-color: #343a40;
+  }
+  &__copyright {
+    color: rgb(201, 201, 201);
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0;
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-inline: 5px;
+
+    font-size: 16px;
+  }
+  &__copyright-p {
+    padding: 0;
+    margin: 0;
+  }
+  &__icons-object {
+    margin: 0 5px 0 0;
+  }
+}
+.mail {
+}
+.mail_inp {
+  width: 82%;
+  padding: 8px 0px 8px 8px;
+
+  border-top: #343a40 1px solid;
+  border-left: #343a40 1px solid;
+  border-bottom: #343a40 1px solid;
+  border-radius: 5px 0 0 5px;
+}
+.mail_inp:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 0, 255, 0.299);
+}
+.btn-mail {
+  border-top: #343a40 1px solid;
+  border-bottom: #343a40 1px solid;
+  padding: 5px;
+  border-right: #343a40 1px solid;
+  padding-right: 15px;
+  border-radius: 0 5px 5px 0;
+  transition: 0.3s;
+  &:hover {
+    background-color: black;
+    transition: 0.3s;
+    .tg {
+      fill: #ffffff;
+      transition: 0.3s;
+    }
+  }
+  position: absolute;
 }

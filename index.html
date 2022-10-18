@@ -7,78 +7,396 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <link rel="stylesheet" href="/style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.min.css" />
+
     <title>Document</title>
   </head>
   <body>
+    <header class="header">
+      <div class="header__container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="nav-wrapper">
+            <a class="navbar-brand" href="#"
+              ><img src="./img/logo.svg" alt="logo"
+            /></a>
+            <form class="form-inline my-2 my-lg-0">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </div>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#"
+                  >Home <span class="sr-only">(current)</span></a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  Dropdown
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <button
+                class="btn btn-outline-success my-2 my-sm-0"
+                type="submit"
+              >
+                ADD A LISTING
+              </button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__header">THE BEST HOLIDAY EXPERIENCE</h1>
+        <h2 class="hero__header_small">Stay like a local</h2>
+        <form action="#" class="hero__form">
+          <input
+            class="hero__search"
+            type="text"
+            placeholder="What are you searching for"
+          />
+          <input
+            class="hero__location"
+            type="text"
+            placeholder="Location"
+          />
+          <div class="hero__img_loc">
+            <svg
+              class="hero__aim"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 463 463"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              enable-background="new 0 0 463 463"
+            >
+              <g>
+                <g>
+                  <path
+                    d="M455.5,224h-24.655C426.978,119.948,343.052,36.022,239,32.155V7.5c0-4.142-3.358-7.5-7.5-7.5S224,3.358,224,7.5v24.655    C119.948,36.022,36.022,119.948,32.155,224H7.5c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h24.655    C36.022,343.052,119.948,426.978,224,430.845V455.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-24.655    C343.052,426.978,426.978,343.052,430.845,239H455.5c4.142,0,7.5-3.358,7.5-7.5S459.642,224,455.5,224z M415.835,224h-33.022    C379.012,146.418,316.582,83.988,239,80.187V47.165C334.78,51.015,411.985,128.22,415.835,224z M343.5,239h24.291    C364.019,308.308,308.308,364.019,239,367.791V343.5c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v24.291    C154.692,364.019,98.981,308.308,95.209,239H119.5c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5H95.209    C98.981,154.692,154.692,98.981,224,95.209V119.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5V95.209    C308.308,98.981,364.019,154.692,367.791,224H343.5c-4.142,0-7.5,3.358-7.5,7.5S339.358,239,343.5,239z M224,47.165v33.021    C146.418,83.988,83.988,146.418,80.187,224H47.165C51.015,128.22,128.22,51.015,224,47.165z M47.165,239h33.022    C83.988,316.582,146.418,379.012,224,382.813v33.022C128.22,411.985,51.015,334.78,47.165,239z M239,415.835v-33.022    c77.582-3.801,140.012-66.232,143.813-143.813h33.022C411.985,334.78,334.78,411.985,239,415.835z"
+                  />
+                  <path
+                    d="m231.5,200c-17.369,0-31.5,14.131-31.5,31.5s14.131,31.5 31.5,31.5 31.5-14.131 31.5-31.5-14.131-31.5-31.5-31.5zm0,48c-9.098,0-16.5-7.402-16.5-16.5s7.402-16.5 16.5-16.5 16.5,7.402 16.5,16.5-7.402,16.5-16.5,16.5z"
+                  />
+                </g>
+              </g>
+            </svg>
+          </div>
+          <select class="hero__selector">
+            <option value="Restaurants">Restaurants</option>
+            <option value="Hotels">Hotels</option>
+            <option value="Cafes">Cafes</option>
+            <option value="Garages">Garages</option>
+          </select>
+          <button class="hero__button" type="submit">SEARCH</button>
+        </form>
+      </div>
+    </section>
+
     <section class="travel">
-      <div class="travel__header"></div>
-      <div class="travel__block-wrapper">
-        <div class="travel__block">
-          <div class="travel__img-wrapper">
-            <img
-              class="travel__img"
-              src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1512917774080-9991f1c4c750.jpg"
-              alt="img"
-            />
+      <div class="container">
+        <div class="travel__header">dcnfdbnb dcmj</div>
+        <div class="travel__block-wrapper">
+          <div class="travel__block">
+            <div class="travel__img-wrapper">
+              <img
+                class="travel__img"
+                src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1512917774080-9991f1c4c750.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="travel__text">
+              <a href="#" class="travel__text_type">TRAVEL</a>
+              <a href="#" class="travel__text_header"
+                >Autumn fashion tips and tricks</a
+              >
+              <p class="travel__date">January 16, 2016</p>
+              <p class="travel__paragraph">
+                Pellentesque habitant morbi tristique senectus. Vestibulum
+                tortor quam, feugiat vitae, ultricies ege...
+              </p>
+              <a href="#" class="travel__button">READ MORE</a>
+            </div>
           </div>
-          <div class="travel__text">
-            <a href="#" class="travel__text_type">TRAVEL</a>
-            <a href="#" class="travel__text_header"
-              >Autumn fashion tips and tricks</a
-            >
-            <p class="travel__date">January 16, 2016</p>
-            <p class="travel__paragraph">
-              Pellentesque habitant morbi tristique senectus. Vestibulum
-              tortor quam, feugiat vitae, ultricies ege...
-            </p>
-            <a href="#" class="travel__button">READ MORE</a>
+          <div class="travel__block">
+            <div class="travel__img-wrapper">
+              <img
+                class="travel__img"
+                src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1512917774080-9991f1c4c750.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="travel__text">
+              <a href="#" class="travel__text_type">TRAVEL</a>
+              <a href="#" class="travel__text_header"
+                >Autumn fashion tips and tricks</a
+              >
+              <p class="travel__date">January 16, 2016</p>
+              <p class="travel__paragraph">
+                Pellentesque habitant morbi tristique senectus. Vestibulum
+                tortor quam, feugiat vitae, ultricies ege...
+              </p>
+              <a href="#" class="travel__button">READ MORE</a>
+            </div>
           </div>
-        </div>
-        <div class="travel__block">
-          <div class="travel__img-wrapper">
-            <img
-              class="travel__img"
-              src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1512917774080-9991f1c4c750.jpg"
-              alt="img"
-            />
-          </div>
-          <div class="travel__text">
-            <a href="#" class="travel__text_type">TRAVEL</a>
-            <a href="#" class="travel__text_header"
-              >Autumn fashion tips and tricks</a
-            >
-            <p class="travel__date">January 16, 2016</p>
-            <p class="travel__paragraph">
-              Pellentesque habitant morbi tristique senectus. Vestibulum
-              tortor quam, feugiat vitae, ultricies ege...
-            </p>
-            <a href="#" class="travel__button">READ MORE</a>
-          </div>
-        </div>
-        <div class="travel__block">
-          <div class="travel__img-wrapper">
-            <img
-              class="travel__img"
-              src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1512917774080-9991f1c4c750.jpg"
-              alt="img"
-            />
-          </div>
-          <div class="travel__text">
-            <a href="#" class="travel__text_type">TRAVEL</a>
-            <a href="#" class="travel__text_header"
-              >Autumn fashion tips and tricks</a
-            >
-            <p class="travel__date">January 16, 2016</p>
-            <p class="travel__paragraph">
-              Pellentesque habitant morbi tristique senectus. Vestibulum
-              tortor quam, feugiat vitae, ultricies ege...
-            </p>
-            <a href="#" class="travel__button">READ MORE</a>
+          <div class="travel__block">
+            <div class="travel__img-wrapper">
+              <img
+                class="travel__img"
+                src="https://d19m59y37dris4.cloudfront.net/directory/2-0-1/img/photo/photo-1512917774080-9991f1c4c750.jpg"
+                alt="img"
+              />
+            </div>
+            <div class="travel__text">
+              <a href="#" class="travel__text_type">TRAVEL</a>
+              <a href="#" class="travel__text_header"
+                >Autumn fashion tips and tricks</a
+              >
+              <p class="travel__date">January 16, 2016</p>
+              <p class="travel__paragraph">
+                Pellentesque habitant morbi tristique senectus. Vestibulum
+                tortor quam, feugiat vitae, ultricies ege...
+              </p>
+              <a href="#" class="travel__button">READ MORE</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <footer class="footer"></footer>
+
+    <section class="line">
+      <div class="line__wrapper">
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-2.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-3.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-4.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-6.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-2.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-3.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-4.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-6.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-2.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-3.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-4.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-6.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-2.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-3.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-4.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-6.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-2.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-3.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-4.jpg" alt="card" />
+        </div>
+        <div class="img__wrapper">
+          <img class="line__img" src="/img/instagram-6.jpg" alt="card" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="footer__text">
+            <h3 class="footer__header">DIRECTORY</h3>
+            <p class="footer__paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipisicing.
+            </p>
+            <div class="footer__icons">
+              <a href="#" class="footer__icons-object"
+                ><img src="./img/icons8-facebook (1).svg" alt="ico"
+              /></a>
+              <a href="#" class="footer__icons-object"
+                ><img src="./img/icons8-github.svg" alt="ico"
+              /></a>
+              <a href="#" class="footer__icons-object"
+                ><img src="./img/icons8-instagram.svg" alt="ico"
+              /></a>
+              <a href="#" class="footer__icons-object"
+                ><img src="./img/icons8-tiktok.svg" alt="ico"
+              /></a>
+              <a href="#" class="footer__icons-object"
+                ><img src="./img/icons8-twitter.svg" alt="ico"
+              /></a>
+            </div>
+          </div>
+          <div class="footer__text">
+            <h3 class="footer__header">RENTALS</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Rooms</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Map on top</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Side map</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">No map</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Room detail</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__text">
+            <h3 class="footer__header">PAGES</h3>
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#">Comparsion</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Team</a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__text">
+            <h3 class="footer__header">DAILY OFFERS & DISCOUNTS</h3>
+            <p class="footer__paragraph long">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
+              itaque temporibus.
+            </p>
+            <form class="mail" action="#">
+              <input
+                type="mail"
+                class="mail_inp"
+                placeholder="Enter your email"
+              />
+              <button class="btn-mail" type="submit">
+                <svg
+                  class="tg"
+                  fill="#000000"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="30px"
+                  height="30px"
+                  style="min-width: 30px"
+                >
+                  <path
+                    d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"
+                  />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyrght__wrapper">
+        <div class="footer__copyright">
+          <p class="footer__copyright-p">
+            © 2021, Your company. All rights reserved.
+          </p>
+          <div class="footer__copyright-img">some img</div>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
